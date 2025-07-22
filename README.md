@@ -43,11 +43,11 @@ This will start the full stack, including optional services like the front-end a
 
 The `docker-compose.yml` includes the following services:
 
-| Service                                                                                                      | Description                                                     |
-| ------------------------------------------------------------------------------------------------------------ |-----------------------------------------------------------------|
-| `url-shortener` (main)                                                                                       | Core URL shortener backend. Built from local `Dockerfile`.      |
-| [`url-shortener-front-end`](https://github.com/milson-antonio/url-shorter-front-end){\:target="\_blank"}     | Public front-end interface. Pulled directly from my Docker Hub. |
-| [`spring-boot-admin-server`](https://github.com/milson-antonio/spring-boot-admin-server){\:target="\_blank"} | Public monitoring dashboard. Also pulled from my Docker Hub.    |
+| Service                                                                                                    | Description                                                     |
+| ---------------------------------------------------------------------------------------------------------- |-----------------------------------------------------------------|
+| `url-shortener` (main)                                                                                     | Core URL shortener backend. Built from local `Dockerfile`.      |
+| [`url-shortener-front-end`](https://github.com/milson-antonio/url-shorter-front-end)    | Public front-end interface. Pulled directly from my Docker Hub. |
+| [`spring-boot-admin-server`](https://github.com/milson-antonio/spring-boot-admin-server) | Public monitoring dashboard. Also pulled from my Docker Hub.    |
 
 > ✅ Both `url-shortener-front-end` and `spring-boot-admin-server` are **public** and **do not require authentication** to pull from Docker Hub.
 > 🛠️ The main `url-shortener` backend is built locally to facilitate quick edits during the evaluation.
@@ -56,11 +56,11 @@ The `docker-compose.yml` includes the following services:
 
 ## 🔗 Useful Endpoints
 
-| Tool / Interface                   | URL                                                                                      |
-| ---------------------------------- | ---------------------------------------------------------------------------------------- |
-| 🌐 **Front-End UI**                | [http://localhost:8080/](http://localhost:8080/){\:target="\_blank"}                     |
-| 📊 **Spring Boot Admin Wallboard** | [http://localhost:8082/wallboard](http://localhost:8082/wallboard){\:target="\_blank"}   |
-| 📚 **Swagger API Docs**            | [http://localhost:8081/swagger-ui](http://localhost:8081/swagger-ui){\:target="\_blank"} |
+| Tool / Interface                 | URL                                                                                     |
+| -------------------------------- | --------------------------------------------------------------------------------------- |
+| **Front-End UI**                | [http://localhost:8080/](http://localhost:8080/)                  |
+| **Spring Boot Admin Wallboard** | [http://localhost:8082/wallboard](http://localhost:8082/wallboard) |
+| **Swagger API Docs**           | [http://localhost:8081/swagger-ui](http://localhost:8081/swagger-ui) |
 
 ---
 
@@ -111,10 +111,10 @@ A Postman collection is also available in the project root under the filename: `
 ## 📎 Related Repositories
 
 * 🔗 **Front-End Repository**:
-  [https://github.com/milson-antonio/url-shorter-front-end](https://github.com/milson-antonio/url-shorter-front-end){\:target="\_blank"}
+  [https://github.com/milson-antonio/url-shorter-front-end](https://github.com/milson-antonio/url-shorter-front-end)
 
 * 📊 **Spring Boot Admin Server**:
-  [https://github.com/milson-antonio/spring-boot-admin-server](https://github.com/milson-antonio/spring-boot-admin-server){\:target="\_blank"}
+  [https://github.com/milson-antonio/spring-boot-admin-server](https://github.com/milson-antonio/spring-boot-admin-server)
 
 ---
 
