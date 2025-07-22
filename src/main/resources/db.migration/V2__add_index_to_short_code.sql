@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX IF NOT EXISTS idx_shorter_url ON url_shortener.url(shorter_url);
