@@ -30,7 +30,9 @@
         <java.version>17</java.version>
         <kotlin.version>1.9.25</kotlin.version>
         <postgresql.version>42.7.7</postgresql.version>
-        <testcontainers.postgresql.version>1.18.3</testcontainers.postgresql.version>
+        <testcontainers.version>1.18.3</testcontainers.version>
+        <testcontainers.postgresql.version>${testcontainers.version}</testcontainers.postgresql.version>
+        <testcontainers.redis.version>2.2.2</testcontainers.redis.version>
         <flyway.version>11.10.2</flyway.version>
         <io.seruco.encoding.version>0.1.3</io.seruco.encoding.version>
     </properties>
@@ -105,6 +107,23 @@
             <groupId>io.seruco.encoding</groupId>
             <artifactId>base62</artifactId>
             <version>${io.seruco.encoding.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${testcontainers.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.redis</groupId>
+            <artifactId>testcontainers-redis</artifactId>
+            <version>${testcontainers.redis.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${testcontainers.version}</version>
         </dependency>
 
 
