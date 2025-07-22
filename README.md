@@ -43,10 +43,12 @@ This will start the full stack, including optional services like the front-end a
 
 The `docker-compose.yml` includes the following services:
 
-| Service                                                                                                    | Description                                                     |
-| ---------------------------------------------------------------------------------------------------------- |-----------------------------------------------------------------|
-| `url-shortener` (main)                                                                                     | Core URL shortener backend. Built from local `Dockerfile`.      |
-| [`url-shortener-front-end`](https://github.com/milson-antonio/url-shorter-front-end)    | Public front-end interface. Pulled directly from my Docker Hub. |
+| Service                                                                                  | Description                                                     |
+|------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
+| PostgresSQL                                                                              ||
+| Redis                                                                                    ||
+| `url-shortener` (main)                                                                   | Core URL shortener backend. Built from local `Dockerfile`.      |
+| [`url-shortener-front-end`](https://github.com/milson-antonio/url-shorter-front-end)     | Public front-end interface. Pulled directly from my Docker Hub. |
 | [`spring-boot-admin-server`](https://github.com/milson-antonio/spring-boot-admin-server) | Public monitoring dashboard. Also pulled from my Docker Hub.    |
 
 > ✅ Both `url-shortener-front-end` and `spring-boot-admin-server` are **public** and **do not require authentication** to pull from Docker Hub.
