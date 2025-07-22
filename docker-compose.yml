@@ -46,6 +46,7 @@ services:
       SPRING_DATASOURCE_USERNAME: milsondev
       SPRING_DATASOURCE_PASSWORD: 5e796cf3fc50
       SPRING_DATA_REDIS_HOST: redis
+      SPRING_BOOT_ADMIN_SERVER: http://spring-boot-admin-server:8082
     command: sh -c "sleep 20 && java -jar app.jar"
     depends_on:
       postgres:
@@ -58,14 +59,25 @@ services:
   # optional front-end for an easy way to test
   # it's pulled from my docker hub public repo
   url-shortener-front-end:
-    image: milsona/dkbcodefactory-url-shortener-front-end:1.0
+    image: milsona/url-shorter-front-end:latest
     container_name: url-shortener-front-end
     ports:
       - "8080:8080"
     environment:
-      - url.shortner.api=http://url-shortener:8081/api/v1/urls
+      URL_SHORTENER_SERVICE: http://url-shortener:8081/api/v1/urls
+      HOST_NAME: http://localhost:8080 #eg: www.shortener.com - domain
+      SPRING_BOOT_ADMIN_SERVER: http://spring-boot-admin-server:8082
     depends_on:
       - url-shortener
+    networks:
+      - dkb-code-factory
+
+  # also optional service for monitoring
+  spring-boot-admin-server:
+    image: milsona/spring-boot-admin-server:latest
+    container_name: spring-boot-admin-server
+    ports:
+      - "8082:8082"
     networks:
       - dkb-code-factory
 
